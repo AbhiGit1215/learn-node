@@ -1,3 +1,5 @@
-// run `node index.js` in the terminal
-
-console.log(`Hello Node.js v${process.versions.node}!`);
+const http = require('http');
+const routes = require('./routes');
+console.log(routes.someText);
+const server = http.createServer(routes.handler);
+server.listen(2800);
